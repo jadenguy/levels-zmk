@@ -1,0 +1,6 @@
+if SHIELD_LEVELS
+
+config ZMK_KEYBOARD_NAME
+  default "Levels BLE Test"
+
+endif
