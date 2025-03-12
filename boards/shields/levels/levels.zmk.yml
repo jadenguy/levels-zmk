@@ -6,3 +6,6 @@ url: https://github.com/Good-Great-Grand-Wonderful/levelts
 requires: [nice_nano_v2]
 features:
   - keys
+siblings:
+  - levels_left
+  - levels_right

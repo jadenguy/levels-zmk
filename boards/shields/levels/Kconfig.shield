@@ -1,2 +1,5 @@
-config SHIELD_LEVELS
-  def_bool $(shields_list_contains,levels)
+config SHIELD_LEVELS_LEFT
+  def_bool $(shields_list_contains,levels_left)
+
+config SHIELD_LEVELS_RIGHT
+  def_bool $(shields_list_contains,levels_right)
