@@ -1,14 +1,24 @@
-#include <dt-bindings/zmk/matrix_transform.h>
+// vim: set ft=dts:
+
+#include "levels.dtsi"
 
 / {
-   chosen {
-      zmk,kscan = &mock_kscan;
+  chosen {
+    zmk,kscan = &mock_kscan;
    };
 
-   mock_kscan: mock_kscan_0 {
-      compatible = "zmk,kscan-mock";
-      columns = <0>;
-      rows = <0>;
-      events = <0>;
-   };
+  mock_kscan: mock_kscan_0 {
+    compatible = "zmk,kscan-mock";
+    columns = <0>;
+    rows = <0>;
+    events = <0>;
+  };
+};
+
+&trackball_listener {
+  status = "okay";
+};
+
+&trackball_listener2 {
+  status = "okay";
 };
