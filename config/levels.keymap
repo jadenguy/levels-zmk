@@ -6,14 +6,14 @@
     combos {
         compatible = "zmk,combos";
 
-        bootload {
-            bindings = <&bootloader>;
-            key-positions = <0 5>;
+        sqoute {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <15 20>;
         };
 
-        bootloadr {
-            bindings = <&none>;
-            key-positions = <6 11>;
+        dqoute {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <16 19>;
         };
     };
 
@@ -72,6 +72,8 @@
 &trans  &trans        &trans        &trans     &kp RS(K_COPY)  &kp K_PASTE    &trans  &kp HOME  &kp END   &kp PAGE_DOWN  &kp PAGE_UP  &trans
                                     &trans     &trans          &trans         &trans  &trans    &trans
             >;
+
+            label = "Navi";
         };
 
         prog {
