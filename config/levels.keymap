@@ -156,11 +156,11 @@
 
         media {
             bindings = <
-&none  &none   &none   &none   &none   &none    &none          &none              &none            &none       &none  &trans
-&none  &none   &none   &none   &none   &none    &none          &none              &none            &none       &none  &trans
-&none  &trans  &trans  &trans  &trans  &none    &kp K_PREV     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none  &none
-&none  &none   &none   &none   &none   &none    &none          &none              &none            &none       &none  &none
-                       &none   &none   &none    &kp C_AC_STOP  &none              &none
+&none  &none   &none   &none   &none   &none    &none           &none              &none            &none       &none  &trans
+&none  &none   &none   &none   &none   &none    &none           &none              &none            &none       &none  &trans
+&none  &trans  &trans  &trans  &trans  &none    &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none  &none
+&none  &none   &none   &none   &none   &none    &none           &none              &none            &none       &none  &none
+                       &none   &none   &none    &kp C_AC_STOP   &kp C_PLAY         &none
             >;
 
             label = "Media";
