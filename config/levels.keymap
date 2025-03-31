@@ -123,11 +123,11 @@
         base {
             display-name = "Base";
             bindings = <
-&trans     &kp N1           &kp N2           &kp N3        &kp N4             &kp N5       &kp N6           &kp N7              &kp N8        &kp N9       &kp N0            &kp C_VOLUME_UP
-&trans     &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J            &kp L               &kp U         &kp Y        &kp SQT           &kp C_VOL_DN
-&trans     &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RIGHT_GUI O  &trans
-&kp LSHFT  &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K            &kp H               &kp COMMA     &kp DOT      &kp SLASH         &trans
-                                             &kp ESCAPE    &lt 1 SPACE        &lt 2 TAB    &lt 4 BACKSPACE  &kp ENTER           &lt 0 DELETE
+&none  &mkp MB4         &mkp RCLK        &mkp MCLK        &mkp LCLK          &mkp MB5     &mkp MB4         &mkp LCLK           &mkp MCLK     &mkp RCLK    &mkp MB5          &kp C_VOLUME_UP
+&none  &kp Q            &kp W            &kp F            &kp P              &kp B        &kp J            &kp L               &kp U         &kp Y        &kp SQT           &kp C_VOL_DN
+&none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S     &hml LEFT_SHIFT T  &kp G        &kp M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RIGHT_GUI O  &none
+&mo 7  &kp Z            &kp X            &kp C            &kp D              &kp V        &kp K            &kp H               &kp COMMA     &kp DOT      &kp SLASH         &tog 7
+                                         &lt 3 BACKSPACE  &lt 1 SPACE        &lt 2 TAB    &lt 5 BACKSPACE  &lt 4 ENTER         &lt 0 DELETE
             >;
         };
 
