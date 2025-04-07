@@ -192,7 +192,7 @@
             display-name = "F-Keys";
             bindings = <
 &none   &none    &none   &none              &none      &none              &none  &none      &none      &none     &none     &trans
-&none   &kp F12  &kp F7  &kp F8             &kp F9     &kp SYSREQ         &none  &none      &none      &none     &none     &trans
+&none   &kp F12  &kp F7  &kp F8             &kp F9     &kp PRINTSCREEN    &none  &none      &none      &none     &none     &trans
 &none   &kp F11  &kp F4  &kp F5             &kp F6     &kp SCROLLLOCK     &none  &kp RSHFT  &kp LCTRL  &kp RALT  &kp RWIN  &none
 &trans  &kp F10  &kp F1  &kp F2             &kp F3     &kp PAUSE_BREAK    &none  &none      &none      &none     &none     &trans
                          &kp K_APPLICATION  &kp SPACE  &kp TAB            &none  &none      &none
