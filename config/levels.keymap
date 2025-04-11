@@ -55,6 +55,11 @@
             bindings = <&vimsave>;
             key-positions = <50 14>;
         };
+
+        NumHold {
+            bindings = <&tog 7>;
+            key-positions = <47 35>;
+        };
     };
 
     macros {
@@ -126,7 +131,7 @@
 &none  &mkp MB4         &mkp RCLK        &mkp MCLK     &mkp LCLK          &mkp MB5     &mkp MB4         &mkp LCLK           &mkp MCLK     &mkp RCLK    &mkp MB5          &kp C_VOLUME_UP
 &none  &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J            &kp L               &kp U         &kp Y        &kp SQT           &kp C_VOL_DN
 &none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RIGHT_GUI O  &none
-&mo 7  &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K            &kp H               &kp COMMA     &kp DOT      &kp SLASH         &tog 7
+&mo 7  &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K            &kp H               &kp COMMA     &kp DOT      &kp SLASH         &mo 7
                                          &lt 3 ESCAPE  &lt 1 SPACE        &lt 2 TAB    &lt 5 BACKSPACE  &lt 4 ENTER         &lt 6 DELETE
             >;
         };
