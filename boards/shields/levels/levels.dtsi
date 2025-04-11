@@ -111,9 +111,10 @@
     device = <&trackball_split>;
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 3>;
 
-    scroll {
-      layers = <6>;
+    slowMouse {
+      layers = <2>;
       input-processors = <&zip_xy_scaler 1 12>;
+      process-next;
     };
   };
 
@@ -122,10 +123,5 @@
     status = "disabled";
     device = <&trackball_split2>;
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 12>;
-
-    scroll {
-      layers = <1>;
-      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 12>, <&zip_xy_to_scroll_mapper>;
-    };
   };
 };
