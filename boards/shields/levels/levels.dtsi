@@ -109,7 +109,7 @@
     compatible = "zmk,input-listener";
     status = "disabled";
     device = <&trackball_split>;
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 3>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 4>;
 
     scroll {
       layers = <6>;
@@ -121,7 +121,7 @@
     compatible = "zmk,input-listener";
     status = "disabled";
     device = <&trackball_split2>;
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 10>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 12>;
 
     scroll {
       layers = <1>;
