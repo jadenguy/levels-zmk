@@ -114,6 +114,7 @@
     scroll {
       layers = <6>;
       input-processors = <&zip_xy_scaler 1 12>;
+      process-next;
     };
   };
 
