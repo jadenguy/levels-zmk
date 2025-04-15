@@ -138,10 +138,10 @@
 
         nav {
             bindings = <
-&none   &none         &none         &none      &none           &none    &none           &none           &none          &none       &none       &trans
-&none   &none         &none         &none      &none           &none    &kp K_UNDO      &kp K_REDO      &kp K_PASTE    &kp K_COPY  &kp K_CUT   &trans
-&none   &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT   &caps_word  &none
-&trans  &none         &none         &none      &none           &none    &kp HOME        &kp PG_UP       &kp PAGE_DOWN  &kp END     &kp INS     &trans
+&none   &none         &none         &none      &none           &none    &none           &none           &none         &none       &none       &trans
+&none   &none         &none         &none      &none           &none    &kp K_UNDO      &kp K_REDO      &kp K_PASTE   &kp K_COPY  &kp K_CUT   &trans
+&none   &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT   &caps_word  &none
+&trans  &none         &none         &none      &none           &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END     &kp INS     &trans
                                     &none      &none           &none    &kp BACKSPACE   &kp ENTER       &kp DELETE
             >;
 
