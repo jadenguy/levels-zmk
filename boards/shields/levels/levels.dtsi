@@ -122,7 +122,7 @@
     compatible = "zmk,input-listener";
     status = "disabled";
     device = <&trackball_split2>;
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 12>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 11>;
 
     scroll {
       layers = <1>;
