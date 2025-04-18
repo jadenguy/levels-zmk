@@ -126,8 +126,7 @@
   
     slowScroll {
       layers = <2>;
-      input-processors = <&zip_xy_scaler 1 16>, <&zip_xy_swap_mapper>;
-      process-next;
+    input-processors = <&zip_xy_swap_mapper>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
     };
   };
 };
