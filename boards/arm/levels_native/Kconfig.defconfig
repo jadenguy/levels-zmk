@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: MIT
+
+if BOARD_LEVELS_NATIVE
+
+config BOARD
+  default "levels_native"
+
+if USB_DEVICE_STACK
+
+config USB_NRFX
+  default y
+
+endif #USB
+
+config BT_CTLR
+  default BT
+
+endif # BOARD_LEVELS_NATIVE

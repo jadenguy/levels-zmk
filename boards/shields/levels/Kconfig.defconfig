@@ -1,19 +1,17 @@
-if SHIELD_LEVELS_DONGLE
+if SHIELD_LEVELS_LEFT
 
 config ZMK_KEYBOARD_NAME
-  default "Levels 54BT"
+  default "Levels 54-R2"
 
 config ZMK_SPLIT_ROLE_CENTRAL
   default y
 
-config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-    default 2
-
 endif
 
-if SHIELD_LEVELS_LEFT || SHIELD_LEVELS_RIGHT || SHIELD_LEVELS_DONGLE
+if SHIELD_LEVELS_LEFT || SHIELD_LEVELS_RIGHT
 
 config ZMK_SPLIT
   default y
+
 
 endif

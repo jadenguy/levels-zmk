@@ -1,0 +1,9 @@
+file_format: "1"
+id: levels_native
+name: Levels Native
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://github.com/Good-Great-Grand-Wonderful/levels-zmk

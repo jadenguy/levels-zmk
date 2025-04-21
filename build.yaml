@@ -19,9 +19,8 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: levels_native
     shield: levels_left
-  - board: nice_nano_v2
+    snippet: zmk-usb-logging
+  - board: levels_native
     shield: levels_right
-  - board: seeeduino_xiao_ble
-    shield: levels_dongle prospector_adapter
