@@ -19,8 +19,5 @@
 #
 ---
 include:
-  - board: levels_native
-    shield: levels_left
-    snippet: zmk-usb-logging
-  - board: levels_native
-    shield: levels_right
+  - board: levels54_left
+  - board: levels54_right

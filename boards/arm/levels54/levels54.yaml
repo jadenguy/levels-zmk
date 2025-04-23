@@ -1,5 +1,6 @@
-identifier: levels_native
-name: levels_native
+identifier: levels54
+name: Levels 54
+url: https://ergokeyboards.com
 type: mcu
 arch: arm
 toolchain:
@@ -8,8 +9,10 @@ toolchain:
   - xtools
 supported:
   - adc
-  - usb_device
   - ble
+  - gpio
   - ieee802154
   - pwm
+  - spi
+  - usb_device
   - watchdog
