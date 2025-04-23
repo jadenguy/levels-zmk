@@ -2,6 +2,9 @@
 
 if BOARD_LEVELS54_LEFT
 
+config ZMK_KEYBOARD_NAME
+  default "Levels 54-R2"
+
 config BOARD
   default "level54 left"
 
@@ -38,6 +41,8 @@ config USB_NRFX
 
 config USB_DEVICE_STACK
   default y
+
+endif # USB
 
 config SPI
   default y
