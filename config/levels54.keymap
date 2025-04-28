@@ -162,7 +162,7 @@
 &kp TAB      &kp Q            &kp W            &kp F         &kp P              &kp B               &kp J           &kp L               &kp U              &kp Y        &kp SEMI          &kp BSLH
 &kp TAB      &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G               &kp M           &hmr RIGHT_SHIFT N  &hmr RCTRL E       &hmr RALT I  &hmr RIGHT_GUI O  &kp SINGLE_QUOTE
 &kp LSHFT    &kp Z            &kp X            &kp C         &kp D              &kp V               &kp K           &kp H               &kp COMMA          &kp DOT      &lt 6 SLASH       &kp RSHFT
-                                               &kt LEFT_GUI  &mod_tap 4 ESCAPE  &mod_tap 1 SPACE    &mod_tap 2 RET  &kp BACKSPACE       &mod_tap 3 DELETE
+                                               &kp LEFT_GUI  &mod_tap 4 ESCAPE  &mod_tap 1 SPACE    &mod_tap 2 RET  &kp BACKSPACE       &mod_tap 3 DELETE
             >;
         };
 
