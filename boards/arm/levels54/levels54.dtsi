@@ -50,6 +50,7 @@
     compatible = "zmk,kscan-gpio-matrix";
     debounce-press-ms = <7>;
     debounce-release-ms = <20>;
+    debounce-scan-period-ms = <3>;
     diode-direction = "col2row";
     wakeup-source;
   };
