@@ -1,5 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -84,6 +87,27 @@
             #binding-cells = <0>;
             bindings = <&kp PIPE &kp GREATER_THAN>;
             label = "PIPEOPR";
+        };
+
+        bt_profile1: bt_profile1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 0>;
+            label = "BT_PROFILE1";
+        };
+
+        bt_profile2: bt_profile2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1>;
+            label = "BT_PROFILE2";
+        };
+
+        bt_profile3: bt_profile3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 2>;
+            label = "BT_PROFILE3";
         };
     };
 
@@ -173,19 +197,19 @@
                                     &trans     &trans          &trans         &trans  &trans    &trans
             >;
 
-            label = "Navi";
+            display-name = "Navi";
         };
 
         prog {
             bindings = <
-&none  &none  &none  &none  &none  &bootloader    &bootloader  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none          &none        &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &sys_reset     &sys_reset   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none          &none        &none  &none  &none  &none  &none
-                     &none  &none  &none          &none        &none  &none
+&none  &none  &none  &none  &none  &bootloader    &bootloader  &none         &none         &none         &none         &none
+&none  &none  &none  &none  &none  &none          &none        &bt_profile1  &bt_profile2  &bt_profile3  &none         &none
+&none  &none  &none  &none  &none  &sys_reset     &sys_reset   &none         &none         &none         &none         &none
+&none  &none  &none  &none  &none  &none          &none        &none         &none         &none         &out OUT_TOG  &bt BT_CLR
+                     &none  &none  &none          &none        &none         &none
             >;
 
-            label = "Brogram";
+            display-name = "Brogram";
         };
 
         media {
@@ -197,7 +221,8 @@
                                       &none             &none            &none         &none  &none  &none
             >;
 
-            label = "Media";
+            display-name = "Media";
         };
     };
 };
+

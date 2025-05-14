@@ -19,9 +19,5 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: levels_left
-  - board: nice_nano_v2
-    shield: levels_right
-  - board: seeeduino_xiao_ble
-    shield: levels_dongle prospector_adapter
+  - board: levels54_left
+  - board: levels54_right
