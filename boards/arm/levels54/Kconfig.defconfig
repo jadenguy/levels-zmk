@@ -3,7 +3,7 @@
 if BOARD_LEVELS54_LEFT
 
 config ZMK_KEYBOARD_NAME
-  default "Levels 54-R2"
+  default "Levels54"
 
 config BOARD
   default "level54 left"

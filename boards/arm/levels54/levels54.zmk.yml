@@ -7,6 +7,7 @@ url: https://ergokeyboards.com
 features:
   - keys
   - studio
+  - pointer
 outputs:
   - usb
   - ble
