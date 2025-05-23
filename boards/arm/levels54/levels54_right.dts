@@ -36,7 +36,7 @@
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 &spi0 {
-    cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+    cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 
     trackball_peripheral: trackball_peripheral@0 {
         status = "okay";
