@@ -37,6 +37,16 @@
             bindings = <&bt_profile3>;
             key-positions = <0 3>;
         };
+
+        BT4 {
+            bindings = <&bt_profile4>;
+            key-positions = <0 4>;
+        };
+
+        BT5 {
+            bindings = <&bt_profile5>;
+            key-positions = <0 5>;
+        };
     };
 
     macros {
@@ -59,6 +69,20 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 2>;
             label = "BT_PROFILE3";
+        };
+
+        bt_profile4: bt_profile4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 3>;
+            label = "BT_PROFILE4";
+        };
+
+        bt_profile5: bt_profile5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 4>;
+            label = "BT_PROFILE5";
         };
     };
 
