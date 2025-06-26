@@ -8,11 +8,38 @@
     combos {
         compatible = "zmk,combos";
 
-       
+        LNumPad {
+            bindings = <&to 7>;
+            key-positions = <36 24>;
+        };
+
+        RNumPad {
+            bindings = <&none>;
+            key-positions = <47 35>;
+        };
+
+        BTClearAll {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <0 36>;
+        };
+
+        BT1 {
+            bindings = <&bt_profile1>;
+            key-positions = <0 1>;
+        };
+
+        BT2 {
+            bindings = <&bt_profile2>;
+            key-positions = <0 2>;
+        };
+
+        BT3 {
+            bindings = <&bt_profile3>;
+            key-positions = <0 3>;
+        };
     };
 
     macros {
-
         bt_profile1: bt_profile1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
