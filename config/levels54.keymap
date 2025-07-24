@@ -123,7 +123,7 @@
             display-name = "Base";
             bindings = <
 &none  &mkp MB4         &mkp RCLK        &mkp MCLK     &mkp LCLK          &mkp MB5     &mkp MB4         &mkp LCLK           &mkp MCLK     &mkp RCLK    &mkp MB5          &kp C_VOLUME_UP
-&none  &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J            &kp L               &kp U         &kp Y        &kp SQT           &kp C_VOL_DN
+&to 8  &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J            &kp L               &kp U         &kp Y        &kp SQT           &kp C_VOL_DN
 &none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M            &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RIGHT_GUI O  &none
 &mo 7  &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K            &kp H               &kp COMMA     &kp DOT      &kp SLASH         &mo 7
                                          &lt 3 ESCAPE  &lt 1 SPACE        &lt 2 TAB    &lt 5 BACKSPACE  &lt 4 ENTER         &lt 6 DELETE
@@ -200,14 +200,26 @@
 
         numpad {
             bindings = <
-&none   &none           &none           &none      &none  &none    &kp KP_NUMLOCK  &kp DEL  &kp FSLH  &kp STAR  &kp MINUS  &none
-&none   &none           &kp UP_ARROW    &none      &none  &none    &none           &kp N7   &kp N8    &kp N9    &kp PLUS   &none
-&none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none  &none    &none           &kp N4   &kp N5    &kp N6    &kp RET    &none
-&trans  &none           &none           &none      &none  &none    &none           &kp N1   &kp N2    &kp N3    &kp RET    &trans
-                                        &none      &none  &none    &none           &kp N0   &kp DOT
+&none   &none           &trans          &trans     &trans  &none    &kp KP_NUMLOCK  &kp DEL  &kp FSLH  &kp STAR  &kp MINUS  &none
+&none   &none           &kp UP_ARROW    &none      &none   &none    &none           &kp N7   &kp N8    &kp N9    &kp PLUS   &none
+&none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none   &none    &none           &kp N4   &kp N5    &kp N6    &kp RET    &none
+&trans  &none           &none           &none      &none   &none    &none           &kp N1   &kp N2    &kp N3    &kp RET    &trans
+                                        &none      &none   &none    &none           &kp N0   &kp DOT
             >;
 
             label = "NumPad";
+        };
+
+        bt {
+            bindings = <
+&bt BT_CLR      &bt_profile1  &bt_profile2  &bt_profile3  &bt_profile4  &bt_profile5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG    &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans        &trans        &trans          &trans  &trans  &trans
+            >;
+
+            label = "BlueTooth";
         };
     };
 };
