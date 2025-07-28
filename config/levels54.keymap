@@ -47,6 +47,11 @@
             bindings = <&bt_profile5>;
             key-positions = <0 5>;
         };
+
+        Studio {
+            bindings = <&studio_unlock>;
+            key-positions = <0 11>;
+        };
     };
 
     macros {
