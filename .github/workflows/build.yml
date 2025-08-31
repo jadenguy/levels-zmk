@@ -20,6 +20,9 @@ jobs:
         echo "Commit SHA: ${{ github.sha }}" >> commit_info.txt
         echo "Short SHA: ${GITHUB_SHA:0:7}" >> commit_info.txt
         echo "Branch: ${{ github.ref_name }}" >> commit_info.txt
+        echo "Commit Message: $(git log -1 --pretty=format:'%s')" >> commit_info.txt
+        echo "Commit Author: $(git log -1 --pretty=format:'%an <%ae>')" >> commit_info.txt
+        echo "Commit Date: $(git log -1 --pretty=format:'%ci')" >> commit_info.txt
         echo "Build Date: $(date -u)" >> commit_info.txt
         echo "Repository: ${{ github.repository }}" >> commit_info.txt
         echo "Workflow Run: ${{ github.run_number }}" >> commit_info.txt
