@@ -14,27 +14,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Create commit info file
-      run: |
-        echo "ZMK Firmware Build Information" > commit_info.txt
-        echo "=============================" >> commit_info.txt
-        echo "Commit SHA: ${{ github.sha }}" >> commit_info.txt
-        echo "Short SHA: ${GITHUB_SHA:0:7}" >> commit_info.txt
-        echo "Branch: ${{ github.ref_name }}" >> commit_info.txt
-        echo "Commit Message: $(git log -1 --pretty=format:'%s')" >> commit_info.txt
-        echo "Commit Author: $(git log -1 --pretty=format:'%an <%ae>')" >> commit_info.txt
-        echo "Commit Date: $(git log -1 --pretty=format:'%ci')" >> commit_info.txt
-        echo "Build Date: $(date -u)" >> commit_info.txt
-        echo "Repository: ${{ github.repository }}" >> commit_info.txt
-        echo "Workflow Run: ${{ github.run_number }}" >> commit_info.txt
-        if [ "${{ github.event_name }}" = "pull_request" ]; then
-          echo "PR Number: ${{ github.event.number }}" >> commit_info.txt
-        fi
-        echo "" >> commit_info.txt
-        echo "Boards built: levels54_left, levels54_right" >> commit_info.txt
-        echo "Studio enabled on: levels54_left" >> commit_info.txt
-        echo "" >> commit_info.txt
-        echo "This firmware was built from commit ${{ github.sha }}" >> commit_info.txt
-        cat commit_info.txt
+      run: ./scripts/create-commit-info.sh
     
     - name: Download firmware artifacts
       uses: actions/download-artifact@v4
