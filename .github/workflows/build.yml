@@ -4,3 +4,55 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2.1
+  
+  package:
+    runs-on: ubuntu-latest
+    needs: build
+    name: Package firmware with commit info
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Create commit info file
+      run: bash ./scripts/create-commit-info.sh
+    
+    - name: Download firmware artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: firmware-artifacts
+    
+    - name: List downloaded artifacts
+      run: find firmware-artifacts -type f -name "*.uf2" -o -name "*.hex"
+    
+    - name: Create firmware package
+      run: |
+        mkdir firmware-package
+        
+        # Copy all firmware files
+        find firmware-artifacts -name "*.uf2" -exec cp {} firmware-package/ \;
+        find firmware-artifacts -name "*.hex" -exec cp {} firmware-package/ \;
+        
+        # Add commit info
+        cp commit_info.txt firmware-package/
+        
+        # Create README
+        echo "ZMK Firmware Package" > firmware-package/README.txt
+        echo "===================" >> firmware-package/README.txt
+        echo "" >> firmware-package/README.txt
+        echo "This package contains:" >> firmware-package/README.txt
+        echo "- levels54_left.uf2 (with ZMK Studio support)" >> firmware-package/README.txt
+        echo "- levels54_right.uf2" >> firmware-package/README.txt
+        echo "- commit_info.txt (build details)" >> firmware-package/README.txt
+        echo "- This README file" >> firmware-package/README.txt
+        echo "" >> firmware-package/README.txt
+        echo "Flash the .uf2 files to your keyboard halves." >> firmware-package/README.txt
+        
+        # List contents
+        echo "Package contents:"
+        ls -la firmware-package/
+    
+    - name: Upload complete firmware package
+      uses: actions/upload-artifact@v4
+      with:
+        name: levels54-firmware-package
+        path: firmware-package/
