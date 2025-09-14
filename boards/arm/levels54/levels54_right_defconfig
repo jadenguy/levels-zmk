@@ -29,6 +29,8 @@ CONFIG_ZMK_BLE=y
 CONFIG_BT_GATT_ENFORCE_SUBSCRIPTION=n
 CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
 
+CONFIG_BT_CTLR_PHY_2M=n
+
 # The full two-byte consumer report space has compatibility issues with some
 # operating systems, most notably macOS. Use the more basic single-byte usage
 # space.
